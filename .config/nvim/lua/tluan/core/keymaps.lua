@@ -6,6 +6,8 @@ local keymap = vim.keymap -- for conciseness
 ---------------------
 -- General Keymaps
 ---------------------
+-- Select all
+keymap.set("n", "<C-a>", "gg<S-v>G")
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>")
