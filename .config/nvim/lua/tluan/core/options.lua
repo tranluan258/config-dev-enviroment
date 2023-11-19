@@ -1,5 +1,8 @@
 local opt = vim.opt -- for conciseness
 
+-- title
+opt.title = true -- set title of window to the value of the titlestring option
+
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
