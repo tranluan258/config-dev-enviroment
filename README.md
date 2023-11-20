@@ -1,8 +1,5 @@
-## Dev Environment Configs
+## My Dev Environment Configs
 
 ## Installation
 
 ## Requirements
-
--
--
