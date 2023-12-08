@@ -3,6 +3,9 @@ return {
 
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter-angular",
+    },
     opts = {
       ensure_installed = {
         "json",

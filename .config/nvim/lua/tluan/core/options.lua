@@ -1,8 +1,8 @@
 local opt = vim.opt -- for conciseness
 
 --spell checker in vim
-opt.spelllang = "en_us"
-opt.spell = true
+-- opt.spelllang = "en_us"
+-- opt.spell = true
 
 -- title
 opt.title = true -- set title of window to the value of the titlestring option
