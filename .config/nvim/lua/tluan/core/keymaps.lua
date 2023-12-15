@@ -32,10 +32,10 @@ keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) 
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
 
 -- tmux navigation
-keymap.set("n", "<C-h>", "<cmd>TmuxNavigateLeft<CR>", { desc = "Navigate left" })
-keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<CR>", { desc = "Navigate down" })
-keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<CR>", { desc = "Navigate up" })
-keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<CR>", { desc = "Navigate right" })
+keymap.set("n", "<C-h>", "<C-w-h>", { desc = "Navigate left" })
+keymap.set("n", "<C-j>", "<C-w-j>", { desc = "Navigate down" })
+keymap.set("n", "<C-k>", "<C-w-k>", { desc = "Navigate up", silent = true })
+keymap.set("n", "<C-l>", "<C-w-l>", { desc = "Navigate right", silent = true })
 
 -- lazygit
-keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open lazygit" })
+keymap.set("n", "<leader>lg", "<cmd>LazyGit<CR>", { desc = "Open lazygit" })

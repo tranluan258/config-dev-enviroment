@@ -4,6 +4,9 @@ local opt = vim.opt -- for conciseness
 -- opt.spelllang = "en_us"
 -- opt.spell = true
 
+-- default shell
+opt.shell = "/run/current-system/sw/bin/zsh"
+
 -- title
 opt.title = true -- set title of window to the value of the titlestring option
 

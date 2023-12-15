@@ -1,4 +1,6 @@
 return {
-  "dracula/vim",
-  as = "dracula",
+  "craftzdog/solarized-osaka.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
 }
