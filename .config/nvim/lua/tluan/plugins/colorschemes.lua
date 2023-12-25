@@ -1,6 +1,6 @@
 return {
-  "craftzdog/solarized-osaka.nvim",
+  "https://github.com/dracula/vim.git",
+  as = "dracula",
   lazy = false,
   priority = 1000,
-  opts = {},
 }

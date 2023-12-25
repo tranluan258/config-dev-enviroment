@@ -4,8 +4,8 @@ local opt = vim.opt -- for conciseness
 -- opt.spelllang = "en_us"
 -- opt.spell = true
 
--- default shell
-opt.shell = "/run/current-system/sw/bin/zsh"
+-- vim.g.copilot_no_tab_map = true
+-- vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- title
 opt.title = true -- set title of window to the value of the titlestring option
