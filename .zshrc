@@ -112,7 +112,21 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias f='fd --type f --hidden --exclude .git --exclude  node_modules | fzf-tmux -p --reverse | xargs nvim'
+alias gs='git status'
+alias gc='git commit -m'
+alias gca='git commit -am'
+alias gco='git checkout'
+alias sb='git checkout $(git branch | fzf-tmux -p --reverse | awk "{print \$1}")'
+alias gp='git push'
+alias gpl='git pull'
+alias gpu='git push --set-upstream origin $(git branch --show-current)'
+
+
+alias la='ls -a'
+
+alias f='fd --type f --hidden --exclude .git --exclude node_modules | fzf-tmux -p --reverse --preview "bat --style=numbers,changes --color=always {}"  | xargs nvim'
+alias zi='cd $(z -l | fzf-tmux -p --reverse | awk "{print \$2}")'
+alias zt='tmux new -s "$(z -l | fzf-tmux -p --reverse | awk '\''{split($2, a, "/"); print a[length(a)]}'\'')"'
 alias vi="nvim"
 alias py="python3"
 alias swag='$(go env GOPATH)/bin/swag'
