@@ -120,14 +120,16 @@ alias sb='git checkout $(git branch | fzf-tmux -p --reverse | awk "{print \$1}")
 alias gp='git push'
 alias gpl='git pull'
 alias gpu='git push --set-upstream origin $(git branch --show-current)'
+alias gl='git log --oneline --graph --decorate --all'
 
 
 alias la='ls -a'
 
-alias f='fd --type f --hidden --exclude .git --exclude node_modules | fzf-tmux -p --reverse --preview "bat --style=numbers,changes --color=always {}"  | xargs nvim'
-alias zi='cd $(z -l | fzf-tmux -p --reverse | awk "{print \$2}")'
-alias zt='tmux new -s "$(z -l | fzf-tmux -p --reverse | awk '\''{split($2, a, "/"); print a[length(a)]}'\'')"'
-alias vi="nvim"
+alias f='fd --type f --hidden --exclude .git --exclude node_modules --exclude .next | fzf-tmux -p --reverse --preview "bat --style=numbers,changes --color=always --theme=Dracula {}"  | xargs nvim'
+alias zd='cd $(z -l | fzf-tmux -p --reverse | awk "{print \$2}")'
+alias tm='tmux attach -t $(basename "$PWD") || tmux new -s  $(basename "$PWD")'
+alias t='tmux switch -t $(tmux list-sessions -F "#{session_name}" | fzf-tmux -p --reverse)'
+alias vi="nvim" 
 alias py="python3"
 alias swag='$(go env GOPATH)/bin/swag'
 alias air='$(go env GOPATH)/bin/air'
@@ -144,3 +146,4 @@ export NVM_DIR="$HOME/.nvm"
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
