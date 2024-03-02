@@ -29,5 +29,3 @@
   - [alacritty](https://github.com/alacritty/alacritty) **_(Linux, Macos & Windows)_**
   - [iterm2](https://iterm2.com/) **_(Macos)_**
 - [Solarized Osaka](https://github.com/craftzdog/solarized-osaka.nvim)
-
-## Requirements
