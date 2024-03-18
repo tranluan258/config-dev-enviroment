@@ -1,20 +1,22 @@
 local opt = vim.opt -- for conciseness
 
 --spell checker in vim
--- opt.spelllang = "en_us"
--- opt.spell = true
+opt.spelllang = "en_us"
+opt.spell = true
 
 -- vim.g.copilot_no_tab_map = true
 -- vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
 
 -- title
-opt.title = true -- set title of window to the value of the titlestring option
+-- opt.title = false -- set title of window to the value of the titlestring option
+
+opt.showtabline = 0 -- hide tabline
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true -- shows absolute line number on cursor line (when relative number is on)
 
--- tabs & indentation
+-- tabs & indentations
 opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces

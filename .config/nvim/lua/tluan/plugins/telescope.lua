@@ -20,7 +20,7 @@ return {
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
         },
-        file_ignore_patterns = { "node_modules", ".git", "dist", "build" },
+        file_ignore_patterns = { "node_modules", ".git", "dist", "build", ".next", ".idea" },
       },
     })
 

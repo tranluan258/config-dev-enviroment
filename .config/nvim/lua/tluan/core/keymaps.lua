@@ -6,14 +6,26 @@ local keymap = vim.keymap -- for conciseness
 ---------------------
 -- General Keymaps -------------------
 
+-- Select all
+keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
+
+keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Scroll down" })
+keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up" })
+
+keymap.set("v", "<leader>p", '"_dP', { desc = "Paste without overwriting clipboard" })
+keymap.set("n", "<leader>p", '"_dP', { desc = "Paste without overwriting clipboard" })
+
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-
 -- clear search highlights
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
 -- keymap.set("n", "x", '"_x')
+--
+-- move up/down by visual lines
+keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })
+keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line up" })
 
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment

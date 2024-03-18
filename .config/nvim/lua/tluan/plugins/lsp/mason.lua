@@ -49,6 +49,10 @@ return {
         "black", -- python formatter
         "pylint", -- python linter
         "eslint_d", -- js linter
+        "goimports", -- go formatter
+        "gofumpt", -- go formatter
+        "gomodifytags", -- go tags
+        "delve", -- go debugger
       },
     })
   end,
