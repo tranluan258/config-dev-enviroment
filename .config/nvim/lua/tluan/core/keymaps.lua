@@ -6,6 +6,11 @@ local keymap = vim.keymap -- for conciseness
 ---------------------
 -- General Keymaps -------------------
 
+-- n N
+
+keymap.set("n", "n", "nzzzv", { desc = "Move to next search result" })
+keymap.set("n", "N", "Nzzzv", { desc = "Move to next search result" })
+
 -- Select all
 keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
 
@@ -14,6 +19,10 @@ keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Scroll up" })
 
 keymap.set("v", "<leader>p", '"_dP', { desc = "Paste without overwriting clipboard" })
 keymap.set("n", "<leader>p", '"_dP', { desc = "Paste without overwriting clipboard" })
+keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+keymap.set("n", "<leader>Y", [["+Y]])
+
+keymap.set("i", "<C-c>", "<ESC>", { desc = "Exit insert mode with <C-c>" })
 
 -- use jk to exit insert mode
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })

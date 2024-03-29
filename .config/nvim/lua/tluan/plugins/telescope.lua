@@ -12,6 +12,12 @@ return {
 
     telescope.setup({
       defaults = {
+        layout_config = {
+          prompt_position = "top",
+          width = 0.8,
+          height = 0.8,
+        },
+        sorting_strategy = "ascending",
         path_display = { "truncate " },
         mappings = {
           i = {

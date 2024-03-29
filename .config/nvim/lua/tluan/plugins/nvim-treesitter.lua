@@ -26,6 +26,10 @@ return {
         "query",
       },
 
+      autotag = {
+        enable = true,
+      },
+
       -- matchup = {
       -- 	enable = true,
       -- },
