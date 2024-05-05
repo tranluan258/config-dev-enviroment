@@ -24,6 +24,7 @@ return {
         "dockerfile",
         "gitignore",
         "query",
+        "templ",
       },
 
       autotag = {

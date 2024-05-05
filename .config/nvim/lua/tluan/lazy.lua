@@ -17,19 +17,22 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       import = "lazyvim.plugins",
       opts = {
-        colorscheme = "tokyonight",
+        colorscheme = "dracula",
         news = {
           lazyvim = true,
           neovim = true,
         },
       },
     },
+    -- {
+    -- import = "tluan.plugins.lsp",
+    -- },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
-    { import = "lazyvim.plugins.extras.editor.harpoon2" },
+    { import = "lazyvim.plugins.extras.lang.python" },
     {
       import = "lazyvim.plugins.extras.lang.go",
     },
@@ -38,9 +41,6 @@ require("lazy").setup({
     {
       import = "tluan.plugins",
     },
-    {
-      import = "tluan.plugins.lsp",
-    },
   },
 }, {
   checker = {
@@ -48,7 +48,7 @@ require("lazy").setup({
     notify = false,
   },
   install = {
-    colorscheme = "dracula",
+    colorscheme = "tokyonight",
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.

@@ -4,8 +4,9 @@ local opt = vim.opt -- for conciseness
 opt.spelllang = "en_us"
 opt.spell = true
 
--- vim.g.copilot_no_tab_map = true
--- vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+-- disable copilot default
+vim.g.copilot_disable = true
+vim.filetype.add({ extension = { templ = "templ" } })
 
 -- title
 -- opt.title = false -- set title of window to the value of the titlestring option

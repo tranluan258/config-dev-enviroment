@@ -1,13 +1,6 @@
 return {
-  "folke/tokyonight.nvim",
-  lazy = false,
-  priority = 1000,
+  "Mofiqul/dracula.nvim",
   opts = {
-    style = "night",
-    transparent = true,
-    styles = {
-      sidebars = "transparent",
-      floats = "transparent",
-    },
+    transparent_bg = true,
   },
 }
