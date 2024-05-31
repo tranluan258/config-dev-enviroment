@@ -72,6 +72,7 @@
     "workspace.checkThirdParty": false,
     "diagnostics.disable": [
         "missing-fields",
-        "unused-local"
+        "unused-local",
+        "unused-function"
     ]
 }
