@@ -5,9 +5,9 @@ local keymap = vim.keymap -- for conciseness
 
 ---------------------
 -- General Keymaps -------------------
+keymap.set("i", "<C-c>", "esc")
 
 -- n N
-
 keymap.set("n", "n", "nzzzv", { desc = "Move to next search result" })
 keymap.set("n", "N", "Nzzzv", { desc = "Move to next search result" })
 
@@ -30,7 +30,7 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- delete single character without copying into register
--- keymap.set("n", "x", '"_x')
+keymap.set("n", "x", '"_x')
 --
 -- move up/down by visual lines
 keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down" })

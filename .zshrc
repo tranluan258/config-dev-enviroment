@@ -1,5 +1,3 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -112,6 +110,11 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+alias cz='nvim ~/.zshrc'
+alias ct='nvim ~/.tmux.conf'
+alias cv='cd ~/.config/nvim && nvim'
+
+
 alias gs='git status'
 alias gc='git commit -m'
 alias gca='git commit -am'
@@ -122,13 +125,18 @@ alias gpl='git pull'
 alias gpu='git push --set-upstream origin $(git branch --show-current)'
 alias gl='git log --oneline --graph --decorate --all'
 
+alias zt="~/.local/bin/tmux-sessionizer.sh"
+alias tm='tmux attach -t $(basename "$PWD") || tmux new -s  $(basename "$PWD")'
+alias tmw="~/.local/bin/tmux-sessionizer.sh $PWD"
+
 
 alias la='ls -a'
-
-alias f='fd --type f --hidden --exclude .git --exclude node_modules --exclude .next | fzf-tmux -p --reverse --preview "bat --style=numbers,changes --color=always --theme=Dracula {}"  | xargs nvim'
+alias l='eza -l --icons --git -a'
+alias ls='eza -l --icons --git -a'
+alias lt='eza -l --tree --icons --git -a'
+fv() {nvim "$(fd --type f --hidden --exclude .git --exclude node_modules --exclude .next --exclude dist | fzf-tmux -p --reverse --preview 'bat --style=numbers,changes --color=always {}')"}
 alias zd='cd $(z -l | fzf-tmux -p --reverse | awk "{print \$2}")'
-alias tm='tmux attach -t $(basename "$PWD") || tmux new -s  $(basename "$PWD")'
-alias t='tmux switch -t $(tmux list-sessions -F "#{session_name}" | fzf-tmux -p --reverse)'
+alias tl='tmux switch -t $(tmux list-sessions -F "#{session_name}" | fzf-tmux -p --reverse)'
 alias vi="nvim" 
 alias py="python3"
 alias swag='$(go env GOPATH)/bin/swag'
@@ -143,7 +151,29 @@ export NVM_DIR="$HOME/.nvm"
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# bun completions
+[ -s "/Users/luantran/.bun/_bun" ] && source "/Users/luantran/.bun/_bun"
+
+
+# Go completions
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --zsh)"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse '
+
+# Startship
+eval "$(starship init zsh)"
+
+#Eza
+if type brew &>/dev/null; then
+    FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+    autoload -Uz compinit
+    compinit
+fi

@@ -1,7 +1,7 @@
 ## My Dev Environment Configs
 
-![dashboard screenshot](./images/dashboard-nvim.png)
-![vim screenshot](./images/tree.png)
+![dashboard screenshot](./images/dashboard.png)
+![vim screenshot](./images/UI.png)
 
 ## Contents
 
