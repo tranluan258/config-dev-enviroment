@@ -127,7 +127,10 @@ alias gl='git log --oneline --graph --decorate --all'
 
 alias zt="~/.local/bin/tmux-sessionizer.sh"
 alias tm='tmux attach -t $(basename "$PWD") || tmux new -s  $(basename "$PWD")'
+alias ta='tmux attach || tmux'
 alias tmw="~/.local/bin/tmux-sessionizer.sh $PWD"
+
+alias pfetch="~/pfetch/pfetch"
 
 
 alias la='ls -a'
@@ -143,6 +146,11 @@ alias swag='$(go env GOPATH)/bin/swag'
 alias air='$(go env GOPATH)/bin/air'
 alias lg='lazygit'
 alias reload='source ~/.zshrc'
+
+
+export PF_INFO="ascii title os editor"
+export PF_ASCII="Catppuccin"
+export EDITOR="nvim"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
