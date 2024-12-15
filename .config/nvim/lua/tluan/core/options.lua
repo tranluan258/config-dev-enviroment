@@ -59,12 +59,12 @@ local function setBgColor()
   local time = os.date("*t")
   if time.hour >= 6 and time.hour < 18 then
     opt.background = "light"
-    vim.cmd.colorscheme("catppuccin")
-    -- vim.cmd.colorscheme("cyberdream")
+    -- vim.cmd.colorscheme("catppuccin")
+    vim.cmd.colorscheme("rose-pine")
   else
     opt.background = "dark"
-    vim.cmd.colorscheme("catppuccin")
-    -- vim.cmd.colorscheme("cyberdream")
+    vim.cmd.colorscheme("rose-pine")
+    -- vim.cmd.colorscheme("catppuccin")
   end
 end
 

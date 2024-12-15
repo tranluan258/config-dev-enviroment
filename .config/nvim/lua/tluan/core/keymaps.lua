@@ -59,7 +59,7 @@ keymap.set("n", "<C-k>", "<C-w-k>", { desc = "Navigate up", silent = true })
 keymap.set("n", "<C-l>", "<C-w-l>", { desc = "Navigate right", silent = true })
 
 -- lazygit
-keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open lazygit" })
+-- keymap.set("n", "<leader>gg", "<cmd>LazyGit<CR>", { desc = "Open lazygit" })
 
 --undo tree
 keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
