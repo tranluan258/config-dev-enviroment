@@ -1,0 +1,20 @@
+theme = light:rose-pine-dawn,dark:rose-pine
+font-family = JetBrainsMono Nerd Font
+font-size = 18
+font-feature = -liga
+
+window-theme=system
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = true
+macos-titlebar-style = hidden
+macos-icon = custom-style
+macos-icon-frame = aluminum
+macos-option-as-alt = true
+macos-window-shadow = true
+background-opacity = 0.85
+
+clipboard-read = allow
+clipboard-write = allow
+
+shell-integration = zsh
